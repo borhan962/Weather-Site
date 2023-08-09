@@ -14,9 +14,11 @@
   <section class="display-temp " >
     <div class=" py-5 ">
       <div class="container">
-        <div class="search m-auto">
-          <input type="text" id="search" class="form-control rounded-4 bg-dark-subtle w-75 m-auto" placeholder=" &#xF002; Search City..."
-            style="font-family:Arial, FontAwesome" />
+        <div class="search m-auto position-relative">
+          <form onsubmit = "return false">
+          <input type="text" id="search" class="form-control rounded-4 bg-dark-subtle w-75 m-auto " placeholder=" &#xF002; Search City..." style="font-family:Arial, FontAwesome" />
+          <button id="searchBtn" class="btn bg-dark-subtle rounded-pill">Search</button>
+          </form>
         </div>
         
         <div class="row  my-5 g-4 " id="row">

@@ -1,5 +1,6 @@
 let responseData
 let serachInput = document.getElementById("search");
+let searchBtn = document.getElementById("searchBtn")
 let  monthName = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Spet', 'Oct', 'Nov', 'Dec'],
   days = [
     "Sunday",
@@ -18,8 +19,13 @@ let  monthName = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 
   let nextDescription = document.getElementsByClassName("next-description")
 
 
-serachInput.addEventListener("change", function () {
-    get(serachInput.value)
+searchBtn.addEventListener("click", function () {
+    if (serachInput.value == "") {
+      serachInput.setAttribute("required", true)
+    }else{
+      get(serachInput.value)
+    }
+
 });
 
 function clear() {
@@ -29,7 +35,6 @@ function clear() {
 async function get(term){
   let responseApi = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=82147a7371d243bdb90103115231204&q=${term}&days=3`)
    responseData = await responseApi.json()
-    console.log(responseData);
     displayToday()
     displayNext()
        clear()

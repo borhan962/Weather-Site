@@ -64,20 +64,9 @@ body {
     color: #fff;
 }
 
-/* 
 
-footer {
-    background-color: #374850;
-    padding: 10px 0;
+#searchBtn{
+    position: absolute;
+    top: 0;
+    right: 10rem;
 }
-
-footer i {
-    margin-right: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-footer i:hover {
-    color: #37aec3;
-} */
