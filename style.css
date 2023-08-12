@@ -68,5 +68,12 @@ body {
 #searchBtn{
     position: absolute;
     top: 0;
-    right: 10rem;
+    right: 4rem ;
+}
+
+@media  screen and (max-width: 600px) {
+
+    #searchBtn{
+        right: 4rem
+    }
 }
