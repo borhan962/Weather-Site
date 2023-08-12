@@ -35,9 +35,11 @@ function clear() {
 async function get(term){
   let responseApi = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=82147a7371d243bdb90103115231204&q=${term}&days=3`)
    responseData = await responseApi.json()
-    displayToday()
-    displayNext()
-       clear()
+   if (!responseData.error) {
+        displayToday()
+        displayNext()
+        clear()
+   } 
     };
  get("alexandria")
 
